@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Jacareí News</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="noticias">Notícias</string>
+    <string name="configuracoes">Configurações</string>
+
+
+    <string name="feed_titulo">Título</string>
+    <string name="feed_data">Data</string>
+    <string name="feed_link">Link</string>
+    <string name="feed_categoria">Categoria</string>
+
+    <string name="download_feed">Atualizando Conteúdo...</string>
+    <string name="cancel">Cancelar</string>
+    <string name="subtitle">Notícias de Jacareí</string>
+    <string name="swipe_down">Deslize para baixo para atualizar</string>
+    <string name="sync">Atualizar</string>
+    <string name="action_share">Compartilhar</string>
+    <string name="carregando_noticias">Carregando Noticias...</string>
+    <string name="download_complete">Conteúdo atualizado!</string>
+    <string name="empty">Nenhuma notícia no momento...</string>
+    <string name="emptys" />
+</resources>
