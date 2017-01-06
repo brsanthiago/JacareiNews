@@ -11,11 +11,11 @@ import br.com.brsantiago.jacareinews.domain.entity.Noticia;
 public class FavoritoContract {
 
     public interface View {
-        void setList(final List<Noticia> items);
+        void showList(final List<Noticia> items);
 
         void showEmpty();
 
-        void showList();
+        void showView();
     }
 
     public interface Presenter {

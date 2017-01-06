@@ -11,15 +11,14 @@ import br.com.brsantiago.jacareinews.presenter.contract.FavoritoContract;
  */
 
 public class FavoritoPresenter implements FavoritoContract.Presenter {
-    private List<Noticia> noticias;
 
     private FavoritoContract.View view;
 
     @Override
     public void initialize() {
-        noticias = new ArrayList<>();
+        List<Noticia> noticias = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             Noticia noticia = new Noticia();
             noticia.code = Long.parseLong(i + "");
             noticia.content = "";
@@ -31,11 +30,10 @@ public class FavoritoPresenter implements FavoritoContract.Presenter {
 
     @Override
     public void showSuccess(List<Noticia> list) {
-        this.noticias = list;
-        if (noticias.isEmpty()) {
+        if (list.isEmpty()) {
             view.showEmpty();
         } else {
-            view.setList(noticias);
+            view.showList(list);
         }
     }
 

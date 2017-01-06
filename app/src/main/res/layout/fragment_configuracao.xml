@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.ConfiguracaoFragment">
+    tools:context=".ui.ConfiguracaoFragment"
+    android:layout_margin="@dimen/margin_avg">
 
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -12,6 +14,8 @@
         android:layout_height="match_parent"
         tools:context=".ui.ConfiguracaoFragment">
 
-        <include layout="@layout/content_noticia" />
+        <include layout="@layout/content_config" />
     </android.support.design.widget.CoordinatorLayout>
+
+
 </LinearLayout>
