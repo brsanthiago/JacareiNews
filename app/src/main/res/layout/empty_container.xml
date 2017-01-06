@@ -9,7 +9,6 @@
     tools:visibility="gone">
 
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -20,7 +19,7 @@
         android:textSize="60sp" />
 
     <TextView
-        android:id="@+id/locationNotFoundTextView"
+        android:id="@+id/not_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
