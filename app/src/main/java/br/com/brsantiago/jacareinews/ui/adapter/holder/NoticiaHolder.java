@@ -1,11 +1,9 @@
 package br.com.brsantiago.jacareinews.ui.adapter.holder;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -24,16 +22,14 @@ public class NoticiaHolder extends RecyclerView.ViewHolder implements View.OnCli
 
     @BindView(R.id.tvTitulo)
     TextView tvTitulo;
+    @BindView(R.id.tvContent)
+    TextView tvContent;
     @BindView(R.id.tvData)
     TextView tvData;
     @BindView(R.id.tvCategoria)
     TextView tvCategoria;
     @BindView(R.id.tvLink)
     TextView tvLink;
-    @BindView(R.id.tvSite)
-    TextView tvSite;
-    @BindView(R.id.ivImg)
-    ImageView ivImg;
     private Activity context;
     private List<Noticia> noticias;
 
@@ -59,10 +55,11 @@ public class NoticiaHolder extends RecyclerView.ViewHolder implements View.OnCli
     }
 
     public void setDados(final int position) {
-        tvCategoria.setText("CATEGORIA");
-        tvData.setText("04/01/2016");
-        tvLink.setText("http://www.jacarei.sp.gov.br/");
-        tvSite.setText("http://www.jacarei.sp.gov.br/");
-        tvTitulo.setText("Secretaria de Finanças arrecada R$ 9,2 milhões com programa de anistia de multas e juros");
+        final Noticia noticia = noticias.get(position);
+        tvCategoria.setText(noticia.category);
+        tvData.setText(noticia.pubDate);
+        tvLink.setText(noticia.link);
+        tvTitulo.setText(noticia.title);
+        tvContent.setText(noticia.description);
     }
 }
