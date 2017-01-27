@@ -2,10 +2,12 @@ package br.com.brsantiago.jacareinews.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -17,6 +19,7 @@ import br.com.brsantiago.jacareinews.domain.entity.Noticia;
 import br.com.brsantiago.jacareinews.presenter.NoticiaPresenter;
 import br.com.brsantiago.jacareinews.presenter.contract.NoticiaContract;
 import br.com.brsantiago.jacareinews.ui.adapter.NoticiaAdapter;
+import br.com.brsantiago.jacareinews.ui.base.BaseFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -24,7 +27,7 @@ import butterknife.ButterKnife;
  * Created by bruno.oliveira on 03/01/2017.
  */
 
-public class NoticiaFragment extends Fragment implements NoticiaContract.View {
+public class NoticiaFragment extends BaseFragment implements NoticiaContract.View {
     @BindView(R.id.emptyContainer)
     LinearLayout emptyContainer;
 
@@ -49,11 +52,28 @@ public class NoticiaFragment extends Fragment implements NoticiaContract.View {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_noticia, container, false);
         ButterKnife.bind(this, view);
+        setHasOptionsMenu(true);
         presenter = new NoticiaPresenter();
         presenter.setView(this);
         presenter.initialize();
 
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_news, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        final int id = item.getItemId();
+
+        if (id == R.id.action_filter) {
+            System.out.println("Filter NOtificias");
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

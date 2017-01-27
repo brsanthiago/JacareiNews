@@ -26,6 +26,7 @@ public class ConfiguracaoFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_configuracao, container, false);
         ButterKnife.bind(this, view);
+        setHasOptionsMenu(false);
         return view;
     }
 }

@@ -11,6 +11,8 @@ import br.com.brsantiago.jacareinews.domain.entity.Noticia;
 public class MainContract {
 
     public interface View {
+        void doSomethingImportant();
+
         void showFavoritos(final int id);
 
         void showNoticias(final int id);

@@ -4,6 +4,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -94,6 +96,11 @@ public class MainActivity extends BaseActivity implements MainContract.View {
                     }
                 }
         }
+    }
+
+    @Override
+    public void doSomethingImportant() {
+
     }
 
     @Override

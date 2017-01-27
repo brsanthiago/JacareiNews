@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Notificações"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="15sp"
         android:textColor="@color/colorAccent" />
 
     <View style="@style/Divider" />
@@ -20,13 +21,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_min"
-        android:text="Exbir notificações" />
+        android:text="Exibir notificações" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Atualização de Conteúdo"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="15sp"
         android:layout_marginTop="@dimen/margin_avg"
         android:textColor="@color/colorAccent" />
 

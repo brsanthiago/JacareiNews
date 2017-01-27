@@ -20,4 +20,6 @@
     <string name="download_complete">Conteúdo atualizado!</string>
     <string name="empty">Nenhuma notícia no momento...</string>
     <string name="emptys" />
+    <string name="filter">Filtrar</string>
+    <string name="search">Pesquisar</string>
 </resources>
